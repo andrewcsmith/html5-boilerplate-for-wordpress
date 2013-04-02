@@ -36,7 +36,12 @@
 
     <!-- Wordpress Head Items -->
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-		<?php wp_enqueue_script("jquery"); ?>
+		<?php 
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('jquery-tools', 
+		get_template_directory_uri() . '/js/jquery.tools.min.js', 
+		array( 'jquery' ) ); 
+		?>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

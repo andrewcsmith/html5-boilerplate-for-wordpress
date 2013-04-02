@@ -35,10 +35,13 @@ automatic_feed_links();
 // Widgetized Sidebar HTML5 Markup
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
-		'before_widget' => '<section>',
+		'name'         => __( 'Writing Sidebar' ),
+		'id'           => 'writing-sidebar',
+		'description'  => 'Only appears on the Writing categories page',
+		'before_widget'=> '<section>',
 		'after_widget' => '</section>',
 		'before_title' => '<h2 class="widgettitle">',
-		'after_title' => '</h2>',
+		'after_title'  => '</h2>',
 	));
 }
 
@@ -68,15 +71,16 @@ function versioned_resource($relative_url){
   return $relative_url.$file_version;
 }
 
-add_action('init', 'register_my_menu');
-
-function register_my_menu() {
+// Adds the main header menu
+add_action('init', 'register_primary_menu');
+function register_primary_menu() {
 	register_nav_menu( 'primary-menu', __('Primary Menu'));
 }
 
+// Compiles SCSS to CSS and includes
+add_action( 'after_setup_theme', 'generate_css' );
 function generate_css() {
   if(function_exists('wpsass_define_stylesheet'))
     wpsass_define_stylesheet("nav.scss", "style.css");
 		wpsass_define_stylesheet("articles.scss", "style.css");
 }
-add_action( 'after_setup_theme', 'generate_css' );

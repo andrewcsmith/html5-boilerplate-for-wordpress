@@ -26,12 +26,11 @@
 	<script type="text/javascript">
 	var height_change_callback = function() {
     var bodyheight = $(window).height();
-    $(".post").each(function() {
-			$(this).height(bodyheight - 260);
+    $(".article-container").each(function() {
+			$(this).css("max-height", bodyheight-32);
 		});
 	}
 	$(document).ready(height_change_callback);
-
 	// for the window resize
 	$(window).resize(height_change_callback);
 	</script>

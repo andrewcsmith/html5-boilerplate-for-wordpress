@@ -74,6 +74,6 @@ get_header(); ?>
 
 </div>
 
-<?php get_sidebar(); ?>
+<?php dynamic_sidebar('writing-sidebar'); ?>
 
 <?php get_footer(); ?>
