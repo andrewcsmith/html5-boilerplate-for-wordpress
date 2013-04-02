@@ -36,9 +36,8 @@
 
     <!-- Wordpress Head Items -->
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
+		<?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
-
 </head>
 <body <?php body_class(); ?>>
   <!--[if lt IE 7]>
@@ -49,4 +48,9 @@
     <header role="banner">
       <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
       <p class="description"><?php bloginfo('description'); ?></p>
+			<?php wp_nav_menu( array(
+				'theme_location' => 'primary-menu',
+				'container' => 'nav',
+				'container_class' => 'primary-menu',
+				)); ?>
     </header>

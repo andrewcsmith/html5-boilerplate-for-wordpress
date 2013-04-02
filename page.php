@@ -21,10 +21,10 @@ get_header(); ?>
   <?php endwhile; endif; ?>
   <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 
-  <?php comments_template(); ?>
+  <!-- <?php comments_template(); ?> -->
 
 </div>
 
-<?php get_sidebar(); ?>
+<!-- <?php get_sidebar(); ?> -->
 
 <?php get_footer(); ?>

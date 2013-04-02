@@ -67,3 +67,16 @@ function versioned_resource($relative_url){
 
   return $relative_url.$file_version;
 }
+
+add_action('init', 'register_my_menu');
+
+function register_my_menu() {
+	register_nav_menu( 'primary-menu', __('Primary Menu'));
+}
+
+function generate_css() {
+  if(function_exists('wpsass_define_stylesheet'))
+    wpsass_define_stylesheet("nav.scss", "style.css");
+		wpsass_define_stylesheet("articles.scss", "style.css");
+}
+add_action( 'after_setup_theme', 'generate_css' );
