@@ -18,21 +18,17 @@
 
   <!-- Javascript at the bottom for fast page loading -->
 
-  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="<?php echo $GLOBALS["TEMPLATE_RELATIVE_URL"] ?>js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-
 	<!-- jQuery script to resize article columns -->
 	<script type="text/javascript">
 	var height_change_callback = function() {
-    var bodyheight = $(window).height();
-    $(".article-container").each(function() {
-			$(this).css("max-height", bodyheight-32);
+    var bodyheight = jQuery(window).height();
+    jQuery(".article-container").each(function() {
+			jQuery(this).css("height", bodyheight-30);
 		});
 	}
-	$(document).ready(height_change_callback);
+	jQuery(document).ready(height_change_callback);
 	// for the window resize
-	$(window).resize(height_change_callback);
+	jQuery(window).resize(height_change_callback);
 	</script>
 	
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/plugins.js") ?>
