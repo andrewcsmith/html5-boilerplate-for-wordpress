@@ -84,3 +84,4 @@ function generate_css() {
     wpsass_define_stylesheet("nav.scss", "style.css");
 		wpsass_define_stylesheet("articles.scss", "style.css");
 }
+add_theme_support( 'post-thumbnails' );

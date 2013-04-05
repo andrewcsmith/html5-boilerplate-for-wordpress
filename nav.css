@@ -1,0 +1,50 @@
+/ * DO NOT EDIT -  AUTOMATICALLY GENERATED FROM: nav.scss * /
+/*
+ * 
+ * Nav and menu headers for SCSS
+ */
+body {
+  color: inherit; }
+
+#container {
+  position: relative; }
+
+.primary-menu {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  background-color: none;
+  z-index: 100; }
+  .primary-menu ul {
+    position: relative;
+    display: block;
+    padding: 0.5em;
+    color: white;
+    font-size: 0.75em; }
+    .primary-menu ul li {
+      display: inline;
+      margin: 0 1em; }
+      .primary-menu ul li a {
+        color: #666666;
+        text-decoration: none; }
+      .primary-menu ul li a:hover {
+        color: #cccccc; }
+      .primary-menu ul li.current-menu-item a {
+        color: #cccccc; }
+      .primary-menu ul li.current-menu-item a:hover {
+        color: #cccccc; }
+
+ul.sub-menu {
+  font-size: 1em;
+  margin: 0 -0.5em;
+  display: none;
+  position: absolute;
+  top: 2em; }
+  ul.sub-menu li {
+    clear: both; }
+
+  header h1 {
+    display: none; }
+  header .description {
+    display: none; }
+

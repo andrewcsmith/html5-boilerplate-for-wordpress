@@ -14,6 +14,11 @@ get_header(); ?>
     <header>
       <h2><?php the_title(); ?></a></h2>
     </header>
+		<?php if(has_post_thumbnail()) {
+			?><div class="post-thumbnail"><?php
+			the_post_thumbnail();
+			?></div><?php
+		} ?>
     <?php the_content('Read the rest of this entry &raquo;'); ?>
     <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
     <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>

@@ -1,0 +1,133 @@
+/ * DO NOT EDIT -  AUTOMATICALLY GENERATED FROM: articles.scss * /
+/*
+ * 
+ * Nav and menu headers for SCSS
+ */
+body {
+  color: inherit; }
+
+/*
+ * Styles for general articles (in all displays)
+ */
+/*
+ * article.post {
+ * font-size: 0.8em;
+ * h1, h2, h3 {
+ * text-align: left;
+ * font-family: Georgia, serif;
+ * font-size: 1.5em;
+ * font-weight: normal;
+ * padding: 32px;
+ * border-bottom: 1px dotted #ccc;
+ * a {
+ * text-decoration: none;
+ * color: #000;
+ * }
+ * }
+ * }
+ */
+#main {
+  width: 100%;
+  padding: 80px 32px 0px; }
+  #main div.comments-container,
+  #main article.post {
+    width: 640px;
+    overflow-x: hidden;
+    background-color: white;
+    margin: 24px auto 0;
+    padding: 0 20px;
+    font-size: 0.8em; }
+    #main div.comments-container h1,
+    #main div.comments-container h2,
+    #main div.comments-container h3,
+    #main article.post h1,
+    #main article.post h2,
+    #main article.post h3 {
+      text-align: left;
+      font-family: Georgia, serif;
+      font-size: 1.5em;
+      font-weight: normal;
+      padding: 32px;
+      border-bottom: 1px dotted #cccccc; }
+      #main div.comments-container h1 a,
+      #main div.comments-container h2 a,
+      #main div.comments-container h3 a,
+      #main article.post h1 a,
+      #main article.post h2 a,
+      #main article.post h3 a {
+        text-decoration: none;
+        color: black; }
+  #main article.post {
+    padding: 0 20px; }
+    #main article.post h2 {
+      text-align: center; }
+    #main article.post .post-thumbnail {
+      max-width: 640px;
+      margin: 0 auto; }
+      #main article.post .post-thumbnail img {
+        max-width: 640px;
+        height: auto; }
+
+/*
+ * Styles for block display on home page
+ */
+body.home #main {
+    /*
+   * We will keep the scroll bars on the overflow-x
+   */
+  overflow-x: auto;
+  position: relative;
+    /*
+   * padding: 0 2em;
+   */
+    /*
+   * overflow-x: auto;
+   */ }
+  body.home #main #feed-container {
+    width: 3600px;
+    padding: 32px 32px -200px 32px;
+    margin: 0 32px; }
+  body.home #main .article-container-wrapper {
+    overflow: hidden;
+    width: 440px;
+    display: block;
+    float: left; }
+  body.home #main .post-thumbnail {
+    margin: -10px auto;
+    max-width: 360px; }
+    body.home #main .post-thumbnail img {
+      max-width: 360px;
+      height: auto; }
+  body.home #main .article-container {
+        /*
+     * Need to still scroll, while hiding overflow-y scrollbars
+     */
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 420px;
+    padding-right: 80px; }
+    body.home #main .article-container article.post {
+      margin: 0px 20px 20px 20px;
+      padding: 16px 20px 20px 20px;
+      width: 360px;
+      overflow: hidden;
+      position: static; }
+      body.home #main .article-container article.post h2 {
+        text-align: center;
+        margin: 0; }
+      body.home #main .article-container article.post .post-meta {
+        margin: 20px 0;
+        color: #aaaaaa;
+        font-size: 12px;
+        text-align: right; }
+    body.home #main .article-container article.post:first-child {
+      margin-left: 0; }
+    body.home #main .article-container article.post:last-child {
+      margin-right: 2em; }
+
+footer {
+  display: none; }
+
+aside#sidebar {
+  display: none; }
+

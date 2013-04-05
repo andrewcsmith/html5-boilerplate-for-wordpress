@@ -23,12 +23,26 @@
 	var height_change_callback = function() {
     var bodyheight = jQuery(window).height();
     jQuery(".article-container").each(function() {
-			jQuery(this).css("height", bodyheight-30);
+			jQuery(this).css("height", bodyheight-52);
 		});
 	}
 	jQuery(document).ready(height_change_callback);
 	// for the window resize
 	jQuery(window).resize(height_change_callback);
+	
+	// Hide all the submenus whenever we depart the area
+	function hideSubMenus() {$("ul.sub-menu").hide();}
+	$(".primary-menu ul").mouseleave(function() {hideSubMenus();});
+	
+	// An array of the top-level menus we want to use
+	var primaryMenus = [24,13,4];
+	$.each(primaryMenus, function(index, value) { 
+		$("#menu-item-"+value).mouseenter(function() {
+			hideSubMenus();
+			$("#menu-item-" + value + " ul.sub-menu").show();
+		});
+	});
+	
 	</script>
 	
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/plugins.js") ?>

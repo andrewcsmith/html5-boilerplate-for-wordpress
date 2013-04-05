@@ -1,0 +1,132 @@
+/*
+Nav and menu headers for SCSS
+*/
+
+$column_width: 420px;
+$thumbnail_width: $column_width - 60;
+
+$main_column: 640px;
+$main_featured: $main_column;
+
+body {
+	color: inherit;
+}
+
+/* Styles for general articles (in all displays) */
+/*article.post {
+	font-size: 0.8em;
+	h1, h2, h3 {
+		text-align: left;
+		font-family: Georgia, serif;
+		font-size: 1.5em;
+		font-weight: normal;
+		padding: 32px;
+		border-bottom: 1px dotted #ccc;
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+	}
+}*/
+
+#main {
+	width: 100%;
+	padding: 80px 32px 0px;
+	div.comments-container, article.post {
+		width: $main_column;
+		overflow-x: hidden;
+		background-color: #fff;
+		margin: 24px auto 0;
+		padding: 0 20px;
+		
+		font-size: 0.8em;
+		h1, h2, h3 {
+			text-align: left;
+			font-family: Georgia, serif;
+			font-size: 1.5em;
+			font-weight: normal;
+			padding: 32px;
+			border-bottom: 1px dotted #ccc;
+			a {
+				text-decoration: none;
+				color: #000;
+			}
+		}
+	}
+	article.post {
+		padding: 0 20px;
+		h2 {
+			text-align: center;
+		}
+		.post-thumbnail {
+			max-width: $main_featured;
+			margin: 0 auto;
+			img {
+				max-width: $main_featured;
+				height: auto;
+			}
+		}
+	}
+}
+
+/* Styles for block display on home page */
+body.home #main {
+	/* We will keep the scroll bars on the overflow-x */
+	overflow-x: auto;
+	position: relative;
+/*	padding: 0 2em;*/
+/*	overflow-x: auto;*/
+	#feed-container {
+		width: 3600px;
+		padding: 32px 32px -200px 32px;
+		margin: 0 32px;
+	}
+	.article-container-wrapper {
+		overflow: hidden;
+		width: 440px;
+		display: block;
+		float: left;
+	}
+	.post-thumbnail {
+		margin: -10px auto;
+		max-width: $thumbnail_width;
+		img {
+			max-width: $thumbnail_width;
+			height: auto;
+		}
+	}
+	.article-container {
+		/* Need to still scroll, while hiding overflow-y scrollbars */
+		overflow-x: hidden;
+		overflow-y: auto;
+		width: 420px;
+		padding-right: 80px;
+		article.post {
+			margin: 0px 20px 20px 20px;
+			padding: 16px 20px 20px 20px;
+			width: 360px;
+			overflow: hidden;
+			position: static;
+			h2 {
+				text-align: center;
+				margin: 0;
+			}
+			.post-meta {
+				margin: 20px 0;
+				color: #aaa;
+				font-size: 12px;
+				text-align: right;
+			}
+		}
+		article.post:first-child { margin-left: 0; }
+		article.post:last-child { margin-right: 2em; }
+	}
+}
+
+footer {
+	display: none;
+}
+
+aside#sidebar {
+	display: none;
+}
