@@ -28,7 +28,11 @@ body {
  */
 #main {
   width: 100%;
-  padding: 80px 32px 0px; }
+    /*
+   * padding-top must = the size of the menubar
+   * and should also be the same as the offset in footer.php
+   */
+  padding: 80px 0px 0px; }
   #main div.comments-container,
   #main article.post {
     width: 640px;
@@ -58,7 +62,7 @@ body {
         text-decoration: none;
         color: black; }
   #main article.post {
-    padding: 0 20px; }
+    padding: 0 20px 20px; }
     #main article.post h2 {
       text-align: center; }
     #main article.post .post-thumbnail {
@@ -67,11 +71,14 @@ body {
       #main article.post .post-thumbnail img {
         max-width: 640px;
         height: auto; }
+    #main article.category-empty #searchform {
+      text-align: center; }
 
 /*
  * Styles for block display on home page
  */
-body.home #main {
+body.home #main,
+body.archive #main {
     /*
    * We will keep the scroll bars on the overflow-x
    */
@@ -83,22 +90,27 @@ body.home #main {
     /*
    * overflow-x: auto;
    */ }
-  body.home #main #feed-container {
+  body.home #main #feed-container,
+  body.archive #main #feed-container {
     width: 3600px;
     padding: 32px 32px -200px 32px;
     margin: 0 32px; }
-  body.home #main .article-container-wrapper {
+  body.home #main .article-container-wrapper,
+  body.archive #main .article-container-wrapper {
     overflow: hidden;
     width: 440px;
     display: block;
     float: left; }
-  body.home #main .post-thumbnail {
+  body.home #main .post-thumbnail,
+  body.archive #main .post-thumbnail {
     margin: -10px auto;
     max-width: 360px; }
-    body.home #main .post-thumbnail img {
+    body.home #main .post-thumbnail img,
+    body.archive #main .post-thumbnail img {
       max-width: 360px;
       height: auto; }
-  body.home #main .article-container {
+  body.home #main .article-container,
+  body.archive #main .article-container {
         /*
      * Need to still scroll, while hiding overflow-y scrollbars
      */
@@ -106,23 +118,30 @@ body.home #main {
     overflow-y: auto;
     width: 420px;
     padding-right: 80px; }
-    body.home #main .article-container article.post {
+    body.home #main .article-container article.post,
+    body.archive #main .article-container article.post {
       margin: 0px 20px 20px 20px;
       padding: 16px 20px 20px 20px;
       width: 360px;
       overflow: hidden;
       position: static; }
-      body.home #main .article-container article.post h2 {
+      body.home #main .article-container article.post h2,
+      body.home #main .article-container article.post h3,
+      body.archive #main .article-container article.post h2,
+      body.archive #main .article-container article.post h3 {
         text-align: center;
         margin: 0; }
-      body.home #main .article-container article.post .post-meta {
+      body.home #main .article-container article.post .post-meta,
+      body.archive #main .article-container article.post .post-meta {
         margin: 20px 0;
         color: #aaaaaa;
         font-size: 12px;
         text-align: right; }
-    body.home #main .article-container article.post:first-child {
+    body.home #main .article-container article.post:first-child,
+    body.archive #main .article-container article.post:first-child {
       margin-left: 0; }
-    body.home #main .article-container article.post:last-child {
+    body.home #main .article-container article.post:last-child,
+    body.archive #main .article-container article.post:last-child {
       margin-right: 2em; }
 
 footer {

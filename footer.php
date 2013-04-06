@@ -23,7 +23,7 @@
 	var height_change_callback = function() {
     var bodyheight = jQuery(window).height();
     jQuery(".article-container").each(function() {
-			jQuery(this).css("height", bodyheight-52);
+			jQuery(this).css("height", bodyheight-80);
 		});
 	}
 	jQuery(document).ready(height_change_callback);
